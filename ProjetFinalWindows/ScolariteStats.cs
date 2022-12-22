@@ -22,7 +22,7 @@ namespace ProjetFinalWindows
             get { return listEnseignant; }
             set { listEnseignant = value; }
         }
-        //Constructeur
+        //Constructeur 
         static ScolariteStats()
         {
             listEtudiants = new List<Etudiant>();

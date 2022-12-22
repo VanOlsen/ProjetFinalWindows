@@ -44,6 +44,8 @@
             this.dateNaissancePicker = new System.Windows.Forms.DateTimePicker();
             this.textBoxRecherche = new System.Windows.Forms.TextBox();
             this.buttonRecherche = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxEnsAssign = new System.Windows.Forms.TextBox();
             this.groupBox_Opération.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).BeginInit();
             this.SuspendLayout();
@@ -190,11 +192,29 @@
             this.buttonRecherche.UseVisualStyleBackColor = true;
             this.buttonRecherche.Click += new System.EventHandler(this.buttonRecherche_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Enseignant ID";
+            // 
+            // textBoxEnsAssign
+            // 
+            this.textBoxEnsAssign.Location = new System.Drawing.Point(114, 209);
+            this.textBoxEnsAssign.Name = "textBoxEnsAssign";
+            this.textBoxEnsAssign.Size = new System.Drawing.Size(143, 20);
+            this.textBoxEnsAssign.TabIndex = 16;
+            // 
             // FormAjouterÉtudiant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxEnsAssign);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRecherche);
             this.Controls.Add(this.textBoxRecherche);
             this.Controls.Add(this.dateNaissancePicker);
@@ -236,6 +256,8 @@
         private System.Windows.Forms.DateTimePicker dateNaissancePicker;
         private System.Windows.Forms.TextBox textBoxRecherche;
         private System.Windows.Forms.Button buttonRecherche;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxEnsAssign;
     }
 }
 

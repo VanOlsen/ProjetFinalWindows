@@ -127,7 +127,7 @@
             this.dataGridViewEnseignat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEnseignat.Location = new System.Drawing.Point(309, 60);
             this.dataGridViewEnseignat.Name = "dataGridViewEnseignat";
-            this.dataGridViewEnseignat.Size = new System.Drawing.Size(479, 155);
+            this.dataGridViewEnseignat.Size = new System.Drawing.Size(438, 155);
             this.dataGridViewEnseignat.TabIndex = 8;
             // 
             // groupBox1

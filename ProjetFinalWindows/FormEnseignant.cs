@@ -140,20 +140,37 @@ namespace ProjetFinalWindows
 
         private void buttonModifierEnseigant_Click(object sender, EventArgs e)
         {
-            //Parcourir les lignes de la table Ado.DtEtudiants
-            for (int i = 0; i < ado.DtEnseignant.Rows.Count; i++)
-            {
-                //Trouver la ligne qui correspond au numéro étudiant entré par
-                //l'utilisateur
-                if (ado.DtEnseignant.Rows[i][0].ToString() == textBoxIDEnseigant.Text)
+            //Initialiser les booleens
+            bool b_num = false;
+            bool b_nom = false;
+            bool b_prenom = false;
+            bool b_cours = false;
+            //Vérifier les contrôles et mettre le résultat dans les booleens
+            if (Verifier_RegexNum(textBoxIDEnseigant.Text)) b_num = true;
+            if (Verifier_RegexNom(textBoxNomEnseignant.Text)) b_nom = true;
+            if (Verifier_RegexNom(textBoxPrenomEnseignant.Text)) b_prenom = true;
+            if (comboBoxCoursEnseignant.SelectedIndex != -1) b_cours = true;
+            //Tester les booleens
+            //Si tous sont à vrai, instancier un objet Enseignant et l'ajouter la la liste statique listEnseignant
+            //Et initialiser les contrôles
+            if (b_num && b_nom && b_prenom && b_cours)
+
+                //Parcourir les lignes de la table Ado.DtEtudiants
+                for (int i = 0; i < ado.DtEnseignant.Rows.Count; i++)
                 {
-                    //Apporter toutes les modifications sur tous les champs de la ligne
-                    ado.DtEnseignant.Rows[i][1] = textBoxNomEnseignant.Text.Trim();
-                    ado.DtEnseignant.Rows[i][2] = textBoxPrenomEnseignant.Text.Trim();
-                    ado.DtEnseignant.Rows[i][3] = comboBoxCoursEnseignant.Text.Trim();
-                    MessageBox.Show("Modification réussite !");
+
+                    //Trouver la ligne qui correspond au numéro étudiant entré par
+                    //l'utilisateur
+                    if (ado.DtEnseignant.Rows[i][0].ToString() == textBoxIDEnseigant.Text)
+                    {
+                        //Apporter toutes les modifications sur tous les champs de la ligne
+                        ado.DtEnseignant.Rows[i][1] = textBoxNomEnseignant.Text.Trim();
+                        ado.DtEnseignant.Rows[i][2] = textBoxPrenomEnseignant.Text.Trim();
+                        ado.DtEnseignant.Rows[i][3] = comboBoxCoursEnseignant.Text.Trim();
+                        MessageBox.Show("Modification réussite !");
+                    }
                 }
-            }
+
         }
 
         private void buttonRechercheEnseignant_Click(object sender, EventArgs e)

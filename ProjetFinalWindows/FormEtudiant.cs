@@ -41,6 +41,7 @@ namespace ProjetFinalWindows
 
         private void FormAjouterÉtudiant_Load(object sender, EventArgs e)
         {
+            
             string Query = "Select * from Etudiants;";
             ado.Command.CommandText = Query;
             ado.Command.Connection = ado.Connection;
@@ -48,6 +49,7 @@ namespace ProjetFinalWindows
             ado.Adapter.Fill(ado.DsScolarite);
             ado.DtEtudiant = ado.DsScolarite.Tables[0];
             this.dataGridViewEtudiant.DataSource = ado.DtEtudiant;
+          
 
         }
 
@@ -59,6 +61,7 @@ namespace ProjetFinalWindows
             UnEtudiant[1] = textBox_Nom.Text.Trim();
             UnEtudiant[2] = textBox_Prenom.Text.Trim();
             UnEtudiant[3] = dateNaissancePicker.Value.Year.ToString().Trim();
+            UnEtudiant[4] = textBoxEnsAssign.Text.Trim();
             ado.DtEtudiant.Rows.Add(UnEtudiant);
             MessageBox.Show("Ajout réussi !");
 
