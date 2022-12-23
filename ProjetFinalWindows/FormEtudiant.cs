@@ -55,7 +55,10 @@ namespace ProjetFinalWindows
 
         private void buttonAjouter_Click(object sender, EventArgs e)
         {
-             
+
+            Etudiant Es = new Etudiant(int.Parse(textBox_ID.Text), textBox_Nom.Text, textBox_Prenom.Text, dateNaissancePicker.Text , int.Parse(textBoxEnsAssign.Text));
+            ScolariteStats.ListEtudiants.Add(Es);
+
             DataRow UnEtudiant = ado.DtEtudiant.NewRow();
             UnEtudiant[0] = textBox_ID.Text.Trim();
             UnEtudiant[1] = textBox_Nom.Text.Trim();
