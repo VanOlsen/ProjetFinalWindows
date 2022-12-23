@@ -114,6 +114,7 @@ namespace ProjetFinalWindows
                     ado.DtEtudiant.Rows[i][1] = textBox_Nom.Text.Trim();
                     ado.DtEtudiant.Rows[i][2] = textBox_Prenom.Text.Trim();
                     ado.DtEtudiant.Rows[i][3] = dateNaissancePicker.Value.Year.ToString().Trim();
+                    ado.DtEtudiant.Rows[i][4] = textBoxEnsAssign.Text.Trim();
                     MessageBox.Show("Modification réussite !");
                 }
             }

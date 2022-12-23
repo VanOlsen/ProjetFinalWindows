@@ -56,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adoNET.cs" />
+    <Compile Include="FormConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultation.Designer.cs">
+      <DependentUpon>FormConsultation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScolariteStats.cs" />
     <Compile Include="Enseignant.cs" />
     <Compile Include="FormEnseignant.cs">

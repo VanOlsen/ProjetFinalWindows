@@ -31,5 +31,12 @@ namespace ProjetFinalWindows
             form.MdiParent = this;
             form.Show();
         }
+
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultation form = new FormConsultation();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

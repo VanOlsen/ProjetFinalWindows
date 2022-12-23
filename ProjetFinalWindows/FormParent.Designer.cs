@@ -59,14 +59,14 @@
             // enseignantToolStripMenuItem
             // 
             this.enseignantToolStripMenuItem.Name = "enseignantToolStripMenuItem";
-            this.enseignantToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enseignantToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.enseignantToolStripMenuItem.Text = "Enseignant";
             this.enseignantToolStripMenuItem.Click += new System.EventHandler(this.enseignantToolStripMenuItem_Click);
             // 
             // étudiantToolStripMenuItem
             // 
             this.étudiantToolStripMenuItem.Name = "étudiantToolStripMenuItem";
-            this.étudiantToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.étudiantToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.étudiantToolStripMenuItem.Text = "Étudiant";
             this.étudiantToolStripMenuItem.Click += new System.EventHandler(this.étudiantToolStripMenuItem_Click);
             // 
@@ -75,8 +75,9 @@
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
             this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Click += new System.EventHandler(this.consultationToolStripMenuItem_Click);
             // 
-            // Form2
+            // FormParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +85,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form2";
+            this.Name = "FormParent";
             this.Text = "Form2";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
